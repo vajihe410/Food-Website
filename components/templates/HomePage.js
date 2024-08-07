@@ -8,6 +8,7 @@ import Definition from '../modules/Definition'
 import Companies from '../modules/Companies'
 import Instruction from '../modules/Instruction'
 import Guide from '../modules/Guide'
+import Restrictions from '../modules/Restrictions'
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
       <Companies/>
       <Instruction/>
       <Guide/>
+      <Restrictions/>
     </div>
   )
 }
