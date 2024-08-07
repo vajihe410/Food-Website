@@ -5,6 +5,7 @@ import styles from "./HomePage.module.css"
 import Banner from '../modules/Banner'
 import Attributes from '../modules/Attributes'
 import Definition from '../modules/Definition'
+import Companies from '../modules/Companies'
 
 function HomePage() {
   return (
@@ -12,6 +13,7 @@ function HomePage() {
       <Banner/>
       <Attributes/>
       <Definition/>
+      <Companies/>
     </div>
   )
 }
