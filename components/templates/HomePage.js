@@ -6,6 +6,8 @@ import Banner from '../modules/Banner'
 import Attributes from '../modules/Attributes'
 import Definition from '../modules/Definition'
 import Companies from '../modules/Companies'
+import Instruction from '../modules/Instruction'
+import Guide from '../modules/Guide'
 
 function HomePage() {
   return (
@@ -14,6 +16,8 @@ function HomePage() {
       <Attributes/>
       <Definition/>
       <Companies/>
+      <Instruction/>
+      <Guide/>
     </div>
   )
 }
