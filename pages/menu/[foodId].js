@@ -1,6 +1,13 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 
-function Details() {
+function Details({data}) {
+    const router = useRouter()
+    if(router.isFallback){
+        return(
+            <h2>Loading page ...</h2>
+        )
+    }
   return (
     <div>Details</div>
   )
@@ -23,3 +30,21 @@ export async function getStaticPaths() {
         fallback:true
     }
 }
+    export async function getStaticProps(context) {
+        const {
+          params: { FoodId },
+        } = context;
+        const res = await fetch(`${process.env.BASE_URL}/data/${FoodId}`);
+        const data = await res.json();
+      
+        if (!data.id) {
+          return {
+            notFound: true,
+          };
+        }
+      
+        return {
+          props: { data },
+          revalidate: 10,
+        };
+      }
