@@ -1,11 +1,17 @@
 import React from 'react'
 //Styles
 import styles from './MenuPage.module.css'
+//Components
+import Card from '../modules/Card'
 
 function MenuPage({data}) {
-    console.log(data)
   return (
-    <div>MenuPage</div>
+    <div className={styles.container}>
+        <h2>Menu</h2>
+        <div className={styles.subContainer}>
+            {data.map((food) => <Card key={food.id} {...food}/>)}
+        </div>
+    </div>
   )
 }
 
