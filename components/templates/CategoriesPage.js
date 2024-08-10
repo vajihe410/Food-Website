@@ -6,7 +6,7 @@ import styles from "./CategoriesPage.module.css"
 function CategoriesPage() {
     const router = useRouter()
 
-    const [query, setQuery] = useState({difficulity:"" , time:"" })
+    const [query, setQuery] = useState({difficulty:"" , time:"" })
 
     const changeHandler = (event) => {
         setQuery({...query,[event.target.name] : event.target.value})
@@ -23,8 +23,8 @@ function CategoriesPage() {
         <h2>Categories</h2>
         <div className={styles.subContainer}>
             <div className={styles.select}>
-                <select value={query.difficulity} name='difficulity'  onChange={changeHandler}>
-                    <option value="">Difficulity</option>
+                <select value={query.difficulty} name='difficulty'  onChange={changeHandler}>
+                    <option value="">Difficulty</option>
                     <option value="Easy">Easy</option>
                     <option value="Medium">Medium</option>
                     <option value="Hard">Hard</option>
