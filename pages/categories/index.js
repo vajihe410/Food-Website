@@ -1,7 +1,6 @@
 import CategoriesPage from "../../components/templates/CategoriesPage";
 
 function Categories({ data }) {
-  console.log(data)
   return <CategoriesPage data={data} />;
 }
 
